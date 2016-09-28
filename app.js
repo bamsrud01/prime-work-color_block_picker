@@ -1,5 +1,8 @@
 $(document).ready(function() {
 
+  var right = 0;
+  var total = 0;
+
   createBlocks();
 
   assignColors();
@@ -12,9 +15,13 @@ $(document).ready(function() {
       console.log('To choose: ' + $('#color_select').css('color'));
       if ($chosen === $('#color_select').css('color')) {
         $('#response').text('That\'s right!');
+        right++;
+        $('#score').text(right);
       } else {
         $('#response').text('Sorry, that\'s not right.');
       }
+      total++;
+      $('#total_done').text(total);
       choose();
 
   });
@@ -53,9 +60,6 @@ function shuffleArray(array) {
 }
 
 function choose() {
-  if (chooserArray.length == 0) {
-    chooserArray = shuffleArray(colorList);
-  }
   var current = chooserArray.pop();
   $('#color_select').css('color', current);
   $('#color_select').text(current.toUpperCase());
