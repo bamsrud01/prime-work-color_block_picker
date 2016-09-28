@@ -1,0 +1,17 @@
+.pick {
+  width: 200px;
+  height: 200px;
+  border: 5px solid black;
+  float: left;
+  margin: 2px;
+}
+
+.row {
+  clear: left;
+  width: 860px;
+  margin: 0 auto;
+}
+
+.hidden {
+  opacity: 0;
+}
