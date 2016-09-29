@@ -24,6 +24,11 @@ $(document).ready(function() {
       }
       total++;
       $('#total_done').text(total);
+      function changeback() {
+      $(this).css('background-color', 'white');
+      }
+      setTimeout(changeback, 2000);
+      //$(this).css('background-color', $chosen).setTimeout(2000);
       nextChoose();
 
   });
@@ -68,6 +73,7 @@ function assignColors() {
 }
 //  This function will show the user which color to click by changing the name and color of the word for the color in the instructions.
 function nextChoose() {
+  colorList = shuffleColors(colorList);
   var current = colorList.pop();
   $('#color_select').css('color', current);
   $('#color_select').text(current.toUpperCase());
