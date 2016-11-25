@@ -9,7 +9,7 @@ $(document).ready(function() {
 
   nextChoose();
 
-  //  I had trouble separating this into a separate function.  This function will handle what will happen when a div is clicked.
+  //  This function will handle what will happen when a div is clicked.
   //  It will also add to the score of correct clicks, and call the function to choose the next color.
   $('#blocks').on('click', '.pick', function() {
       var $chosen = $(this).css('background-color');
